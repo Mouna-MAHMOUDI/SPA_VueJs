@@ -1,4 +1,8 @@
-
+<script>
+export default {
+  name: 'App'
+}
+</script>
 
 <template>
 
@@ -9,7 +13,7 @@
       <router-link to="/villes">Liste des villes</router-link>
     </nav>
 
-    <router-view></router-view>
+    <router-view />
 
   </div>
 
