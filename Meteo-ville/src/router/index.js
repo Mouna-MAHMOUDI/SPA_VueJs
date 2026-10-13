@@ -13,7 +13,12 @@ const router = createRouter({
     {
       path: '/ville',
       name: 'ville',
-      component: City
+      component: City,
+      props: {
+          name: 'Ma ville',
+          weather : 'Peu nuageux',
+          temperature : 20.55,
+          updatedAt: new Date() }
     }
   ],
 })

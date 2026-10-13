@@ -1,10 +1,12 @@
 <script setup>
-import { ref } from 'vue'
 
-const name = ref('Ma ville')
-const weather = ref('Peu nuageux')
-const temperature = ref(20.55)
-const updatedAt=ref(new Date())
+ defineProps({
+   name : String,
+   weather : String,
+   temperature : Number,
+   updatedAt : Date
+ })
+
 
 </script>
 <template>
@@ -13,7 +15,7 @@ const updatedAt=ref(new Date())
 
     <p>🌤️ Temps : {{weather}}</p>
 
-    <p>🌡️ Température : {{temperature}}</p>
+    <p>🌡️ Température : {{temperature}} °C</p>
 
     <p>📅 Dernière mise à jour : {{updatedAt.toLocaleString()}}</p>
   </div>
