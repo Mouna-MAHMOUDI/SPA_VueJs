@@ -1,16 +1,18 @@
 
 
-<script setup>
-import CitiesList from './views/CitiesList.vue'
-
-function onListClick() {
-  alert("User clicked")
-}
-</script>
-
 <template>
-  <CitiesList />
-  <button @click="onListClick"> liste des villes </button>
+
+  <div>
+    <h1>Application météo 🌤️</h1>
+
+    <nav>
+      <router-link to="/villes">Liste des villes</router-link>
+    </nav>
+
+    <router-view></router-view>
+
+  </div>
+
 
 </template>
 
